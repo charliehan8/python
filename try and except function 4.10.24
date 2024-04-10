@@ -1,0 +1,87 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOhgpAlAmGC7YKFpGteYA5d",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/charliehan8/python/blob/main/try%20and%20except%20function%204.10.24\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 23,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dgH20Q0bz_aR",
+        "outputId": "0113ff35-5ab0-4388-df0c-d8330f94d108"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "the list is empty\n",
+            "[]\n"
+          ]
+        }
+      ],
+      "source": [
+        "def avg(alist):\n",
+        "  try:\n",
+        "    return sum(alist) / len(alist)\n",
+        "  except ZeroDivisionError:\n",
+        "    print('the list is empty')\n",
+        "    return[]\n",
+        "  except TypeError:\n",
+        "    print('the list has to be numeric only')\n",
+        "    return float('nan')\n",
+        "\n",
+        "result = avg([])\n",
+        "print(result)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "try:\n",
+        "  idx = int(input('Enter Index: '))\n",
+        "  print(l[idx])\n",
+        "except IndexError:\n",
+        "  print('index value out of bounds')\n",
+        "except ValueError:\n",
+        "  print('values must be int')\n",
+        "else:\n",
+        "  print('all good')\n",
+        "finally:\n",
+        "  print('this will be displayed always')\n",
+        ""
+      ],
+      "metadata": {
+        "id": "G7IvLyHP9xIJ"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
